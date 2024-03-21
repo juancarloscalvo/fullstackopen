@@ -4,6 +4,10 @@ sequenceDiagram
     participant servidor
 
     navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+     activate servidor
+    servidor-->>navegador: Returns 302 Found and redirects to /exampleapp/notes
+    deactivate servidor
+
     navegador->>servidor: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate servidor
     servidor-->>navegador: HTML document
