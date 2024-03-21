@@ -5,7 +5,7 @@ sequenceDiagram
 
     navegador->>servidor: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     activate servidor
-    servidor-->>navegador: Post new note
+    servidor-->>navegador: Returns JSON content
     deactivate servidor
 
 ```
